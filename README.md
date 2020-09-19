@@ -11,4 +11,6 @@ There are a few ENV vars to be set:
 The data to be uploaded should be mounted at /data.
 
 ## Example
+```yaml
 docker run --name=myuploader -e UPLOAD_CRON_EXPRESSION='*/2 * * * *' -e BLOB_DESTINATIONCONTAINER_URL="https://mystorageaccount.blob.core.windows.net/mycontainer" -e BLOB_DESTINATIONKEY="mOIUoumoimUOImuoyb9696d93q8m9+asd+1f==" -v /some/data/path/on/host:/data -d robhofmann/azurecronblobuploader:latest
+```
