@@ -5,7 +5,8 @@ RUN apt-get -q update && \
     apt-get -qy dist-upgrade && \
     apt-get install -y --no-install-recommends \
          rsync \
-         libunwind8 && \
+         libunwind8 \
+         git-core cron wget jq && \
     apt-get -y autoremove && \
     apt-get -y clean && \
     rm -rf /var/lib/apt/lists/*
